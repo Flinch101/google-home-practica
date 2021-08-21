@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s ease;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, .7);
+  overflow: hidden;
+}
+
+/* -- -- -- Container -- -- -- */
+.container {
+  margin: auto;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+/* -- -- -- Tags -- -- -- */
+a {
+  text-decoration: none;
+  color:  rgba(0, 0, 0, .7);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.a {
+  cursor: pointer;
+  color: rgb(51, 102, 187);
+}
+
+.a:hover {
+  border-bottom: 1px solid rgb(51, 102, 187);
+}
+
+.separator {
+  border-bottom: 1px solid rgb(221, 222, 226);
+  width: 100%;
+}
+
+.underline {
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  display: block;
+}
+
+.underline:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, .7);
+}
+
+.noMarginRight {
+  margin-right: 0 !important;
+}
+
+/* -- -- -- Header - Main - Footer -- -- -- */
+#header,
+#main,
+#footer {
+  width: 100%;
+  display: flex;
+}
+
+/* -- -- -- Header -- -- -- */
+#header {
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 0.3125rem;
+}
+
+#header .header-item {
+  margin-right: 1.25rem;
+  font-size: 0.625rem;
+}
+
+#header .header-item.menu {
+  font-size: 1rem;
+}
+
+#header .header-item.profile-img {
+  display: flex;
+  align-items: center;
+}
+
+#header .header-item.menu:hover {
+  background: rgba(0, 0, 0, .05);
+}
+
+#header .header-item.profile-img img,
+#header .header-item.menu {
+  max-width: 2.1875rem;
+  border-radius: 100%;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+
+#header .header-item.profile-img img:hover,
+#header .header-item.menu:hover {
+  border: 1px solid rgba(0, 0, 0, .5);
+}
+
+/* -- -- -- Main -- -- -- */
+#main {
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  flex-direction: column;
+}
+
+#main .google-logo {
+  max-width: 12.5rem;
+}
+
+#main .input-search {
+  max-width: 90%;
+  width: 25rem;
+  padding: 0.625rem;
+  margin-top: 1.875rem;
+  border-radius: 6.25rem;
+  border: 1px solid rgba(0, 0, 0, .2);
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main .input-search:hover {
+  box-shadow: 0 1px 6px rgba(32,33,36,.28);
+  border-color: rgba(223,225,229,0);
+}
+
+#main .input-search i {
+  font-size: 0.75rem;
+}
+
+#main .input-search .input {
+  height: 100%;
+  margin-left: 0.625rem;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+#main .btns {
+  margin-top: 1.25rem;
+  display: flex;
+}
+
+#main .btns .btn {
+  padding: 0.625rem;
+  margin-right: 0.625rem;
+  background: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+#main .btns .btn:hover {
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  border: 1px solid rgb(218, 220, 224);
+}
+
+#main .credit {
+  font-size: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+/* -- -- -- Footer -- -- -- */
+#footer {
+  justify-content: flex-start;
+  background: rgb(242, 242, 242);
+  padding: 0.625rem;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+}
+
+#footer .country {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.75rem;
+}
+
+#footer .tags {
+  display: flex;
+}
+
+#footer .tags .tags-1,
+#footer .tags .tags-2 {
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+  display: flex;
+  width: 50%;
+}
+
+#footer .tags .tags-1 {
+  justify-content: flex-start;
+}
+
+#footer .tags .tags-2 {
+  justify-content: flex-end;
+}
+
+#footer .tags .tags-1 span,
+#footer .tags .tags-2 span {
+  margin: 10px;
+}
+
+/* -- -- -- Mediaqueries -- -- -- */
+@media screen and (max-width: 860px){
+  #footer .tags {
+    flex-direction: column;
+  }
+
+  #footer .tags .tags-1,
+  #footer .tags .tags-2 {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 300px){
+  #header {
+    justify-content: center;
+  }
+
+  #header .header-item.profile-img {
+    margin-right: 0;
+  }
+
+  #main .btns {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #main .btns .btn {
+    margin-right: 0;
+    margin-bottom: 0.625rem;
+  }
+}
