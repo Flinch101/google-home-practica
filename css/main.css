@@ -8,7 +8,6 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: rgba(0, 0, 0, .7);
-  overflow: hidden;
 }
 
 /* -- -- -- Container -- -- -- */
@@ -17,6 +16,9 @@ body {
 
   width: 100vw;
   height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* -- -- -- Tags -- -- -- */
@@ -168,7 +170,7 @@ a:hover {
 
 #main .credit {
   font-size: 0.625rem;
-  margin-top: 1.25rem;
+  margin: 1.25rem 0;
 }
 
 /* -- -- -- Footer -- -- -- */
@@ -177,8 +179,7 @@ a:hover {
   background: rgb(242, 242, 242);
   padding: 0.625rem;
   flex-direction: column;
-  position: absolute;
-  bottom: 0;
+  align-self: flex-end;
 }
 
 #footer .country {
